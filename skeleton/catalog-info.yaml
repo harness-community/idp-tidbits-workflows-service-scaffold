@@ -1,0 +1,12 @@
+apiVersion: harness.io/v1
+kind: Component
+type: service
+identifier: ${{ values.repoName }}
+name: ${{ values.serviceName }}
+owner: ${{ values.owner }}
+spec:
+  lifecycle: ${{ values.lifecycle }}
+metadata:
+  description: ${{ values.description }}
+  annotations:
+    github.com/project-slug: harness-community/${{ values.repoName }}
